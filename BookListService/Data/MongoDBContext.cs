@@ -14,6 +14,6 @@ namespace BookListService.Data
             _database = client.GetDatabase(configuration.GetValue<string>("MongoDB:DatabaseName"));
         }
 
-        public IMongoCollection<Book> Books => _database.GetCollection<Book>("Books");
+        public IMongoCollection<Book> Books => _database.GetCollection<Book>("BookList");
     }
 }
